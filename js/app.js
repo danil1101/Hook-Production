@@ -457,13 +457,25 @@
     modules_flsModules.select = new SelectConstructor({});
     const buttonVacancies = document.getElementById("button-vacancies");
     const buttonSummary = document.getElementById("button-summary");
+    const rowVacancies = document.querySelector(".search-main__row._vacancies");
+    const rowSummary = document.querySelector(".search-main__row._summary");
+    const cardsVacancies = document.querySelector(".vacancies__row._vacancies");
+    const cardsSummary = document.querySelector(".vacancies__row._summary");
     buttonVacancies.addEventListener("click", (() => {
         buttonVacancies.classList.add("_active");
+        rowVacancies.classList.add("_active");
+        cardsVacancies.classList.add("_active");
         buttonSummary.classList.remove("_active");
+        rowSummary.classList.remove("_active");
+        cardsSummary.classList.remove("_active");
     }));
     buttonSummary.addEventListener("click", (() => {
         buttonSummary.classList.add("_active");
+        rowSummary.classList.add("_active");
+        cardsSummary.classList.add("_active");
         buttonVacancies.classList.remove("_active");
+        rowVacancies.classList.remove("_active");
+        cardsVacancies.classList.remove("_active");
     }));
     const input = document.getElementById("input");
     const inputSelect = document.querySelector(".select-search-main");

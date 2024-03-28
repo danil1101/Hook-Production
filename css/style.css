@@ -523,15 +523,19 @@ body {
 }
 
 .search-main__row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   gap: 16px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+.search-main__row._active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .search-main__item {
@@ -598,6 +602,9 @@ body {
   font-weight: 500;
   background: #911016;
   border-radius: 14px;
+  -webkit-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  transition: 0.3s all ease;
 }
 
 .select-search-main {
@@ -637,13 +644,17 @@ body {
 }
 
 .vacancies__row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 10px;
+}
+
+.vacancies__row._active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .item-vacancies {
@@ -711,6 +722,14 @@ body {
 @media (any-hover: hover) {
   .select__option:hover {
     color: #911016;
+  }
+
+  .main__item:hover {
+    opacity: 0.9;
+  }
+
+  .search-main__button:hover {
+    opacity: 0.9;
   }
 
   .select-search-main__item:hover {
